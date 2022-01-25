@@ -1,9 +1,16 @@
 // example of array types
+// type PersonListProps = {
+//     names: {
+//         first: string;
+//         last: string;
+//     }[]
+// }
+
+import { Name } from "./Person.types"
+
+// Props Tip 3: Reuse type
 type PersonListProps = {
-    names: {
-        first: string;
-        last: string;
-    }[]
+    names: Name[]
 }
 
 export const PersonList = (props: PersonListProps) => {

@@ -1,25 +1,49 @@
 import './App.css';
-import { Greet } from './components/Greet';
+import { Container } from './components/Container';
+// import { Button } from './components/Button';
+// import { Input } from './components/Input';
+// import { Greet } from './components/Greet';
 // import { Person } from './components/Person';
 // import { PersonList } from './components/PersonList';
-import { Heading } from './components/Heading';
-import { Status } from './components/Status';
-import { Oscar } from './components/Oscar';
+// import { Heading } from './components/Heading';
+// import { Status } from './components/Status';
+// import { Oscar } from './components/Oscar';
 
-
-// Advanced Props: Union,
+// style props
 function App() {
-    return (
-        <div className='App'>
-            <Status status='loading' />
-            <Heading>Placeholder text</Heading>
-            <Oscar>
-                <Heading>Oscar goes to Leornado Dicarpio!!</Heading>
-            </Oscar>
-            <Greet value='Vishwas' condition={ false } />
-        </div>
-    )
+    return <div className='App'>
+        <Container styles={{ border: '1px solid black', padding: '1rem' }} />
+    </div>
 }
+
+// // Event props: Button & Events
+// function App() {
+//     return (
+//         <div className='App'>
+//             <Button
+//                 handleClick={ (event, id) => {
+//                     console.log('Button clicked', event, id)
+//               }}
+//             />
+//             <Input value='' handleChange={(event) => console.log(event)} />
+//         </div>
+//     )
+// }
+
+
+// Advanced Props: Union, Child Components, optional props
+// function App() {
+//     return (
+//         <div className='App'>
+//             <Status status='loading' />
+//             <Heading>Placeholder text</Heading>
+//             <Oscar>
+//                 <Heading>Oscar goes to Leornado Dicarpio!!</Heading>
+//             </Oscar>
+//             <Greet value='Vishwas' condition={ false } />
+//         </div>
+//     )
+// }
 
 
 //// Greet | Person | PersonList comps examples

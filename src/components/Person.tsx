@@ -1,11 +1,6 @@
 // example of object properties type
-
-type PersonProps = {
-    name: {
-        first: string;
-        last: string;
-    }
-}
+// below is tip 2 on seperating types in a file
+import { PersonProps } from "./Person.types"
 
 export const Person = (props: PersonProps) => {
     return (
