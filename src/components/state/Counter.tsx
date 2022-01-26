@@ -5,14 +5,22 @@ type CounterState = {
     count: number;
 };
 
-type CounterAction = {
-    type: 'increment' | 'decrement' | 'reset';
+type UpdateAction = {
+    type: 'increment' | 'decrement';
     payload: number;
 };
 
-type UpdateAction = {
-    type: 'increment' | 'decrement'
-};
+type ResetAction = {
+    type: "reset";
+}
+
+// discriminated approach - recommended method for user function
+type CounterAction = UpdateAction | ResetAction
+
+// type CounterAction = {
+//     type: 'increment' | 'decrement' | 'reset';
+//     payload: number;
+// };
 
 const initialState = { count:0 };
 
