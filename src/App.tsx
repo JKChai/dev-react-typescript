@@ -1,6 +1,8 @@
 import './App.css';
-import { Box } from './components/context/Box';
-import { ThemeContextProvider } from './components/context/ThemeContext';
+import { User } from './components/context/User';
+import { UserContextProvider } from './components/context/UserContext';
+// import { Box } from './components/context/Box';
+// import { ThemeContextProvider } from './components/context/ThemeContext';
 // import { Container } from './components/Container';
 // import { Button } from './components/Button';
 // import { Input } from './components/Input';
@@ -13,11 +15,24 @@ import { ThemeContextProvider } from './components/context/ThemeContext';
 
 function App() {
     return <div className='App'>
-        <ThemeContextProvider>
-            <Box />
-        </ThemeContextProvider>
+        <UserContextProvider>
+            <User />
+        </UserContextProvider>
     </div>
 }
+
+
+
+
+
+// // useContext
+// function App() {
+//     return <div className='App'>
+//         <ThemeContextProvider>
+//             <Box />
+//         </ThemeContextProvider>
+//     </div>
+// }
 
 // style props
 // function App() {
