@@ -1,6 +1,7 @@
 import './App.css';
-import { User } from './components/context/User';
-import { UserContextProvider } from './components/context/UserContext';
+import { Counter } from './components/class/Counter';
+// import { User } from './components/context/User';
+// import { UserContextProvider } from './components/context/UserContext';
 // import { Box } from './components/context/Box';
 // import { ThemeContextProvider } from './components/context/ThemeContext';
 // import { Container } from './components/Container';
@@ -13,14 +14,22 @@ import { UserContextProvider } from './components/context/UserContext';
 // import { Status } from './components/Status';
 // import { Oscar } from './components/Oscar';
 
+// Class components
 function App() {
     return <div className='App'>
-        <UserContextProvider>
-            <User />
-        </UserContextProvider>
+        <Counter message='The count value is '/>
     </div>
 }
 
+
+// // useContext for event
+// function App() {
+//     return <div className='App'>
+//         <UserContextProvider>
+//             <User />
+//         </UserContextProvider>
+//     </div>
+// }
 
 // // useContext
 // function App() {
