@@ -1,5 +1,7 @@
 import './App.css';
-import { Container } from './components/Container';
+import { Box } from './components/context/Box';
+import { ThemeContextProvider } from './components/context/ThemeContext';
+// import { Container } from './components/Container';
 // import { Button } from './components/Button';
 // import { Input } from './components/Input';
 // import { Greet } from './components/Greet';
@@ -9,12 +11,20 @@ import { Container } from './components/Container';
 // import { Status } from './components/Status';
 // import { Oscar } from './components/Oscar';
 
-// style props
 function App() {
     return <div className='App'>
-        <Container styles={{ border: '1px solid black', padding: '1rem' }} />
+        <ThemeContextProvider>
+            <Box />
+        </ThemeContextProvider>
     </div>
 }
+
+// style props
+// function App() {
+//     return <div className='App'>
+//         <Container styles={{ border: '1px solid black', padding: '1rem' }} />
+//     </div>
+// }
 
 // // Event props: Button & Events
 // function App() {
