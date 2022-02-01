@@ -38,6 +38,7 @@ function App() {
                 {
                     first: 'Princess',
                     last: 'Diana',
+                    
                 },
             ]}
             onClick={(item) => console.log(item)}
