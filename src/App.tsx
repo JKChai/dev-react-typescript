@@ -1,5 +1,6 @@
 import './App.css';
-import { Counter } from './components/class/Counter';
+import { List } from './components/generics/List';
+// import { Counter } from './components/class/Counter';
 // import { User } from './components/context/User';
 // import { UserContextProvider } from './components/context/UserContext';
 // import { Box } from './components/context/Box';
@@ -14,12 +15,58 @@ import { Counter } from './components/class/Counter';
 // import { Status } from './components/Status';
 // import { Oscar } from './components/Oscar';
 
-// Class components
+
+// Generic Props
 function App() {
-    return <div className='App'>
-        <Counter message='The count value is '/>
+    return (
+    <div className='App'>
+        <List 
+            items={['Batman', 'Superman', 'Wonder Woman']}
+            onClick={(item) => console.log(item)}    
+        />
+        <List items={[1,2,3]} onClick={(item) => console.log(item)} />
+        <List 
+            items = {[
+                {
+                    first: 'Bruce',
+                    last: 'Wayne',
+                },
+                {
+                    first: 'Clark',
+                    last: 'Kent',
+                },
+                {
+                    first: 'Princess',
+                    last: 'Diana',
+                },
+            ]}
+            onClick={(item) => console.log(item)}
+        />
     </div>
-}
+    )
+};
+
+
+
+// // Component props
+// import './App.css'
+// import { Private } from './components/auth/Private';
+// import { Profile } from './components/auth/Profile';
+
+// function App() {
+//     return (
+//     <div className='App'>
+//         <Private isLoggedIn={true} component={Profile} />
+//     </div>
+//     )
+// };
+
+// // Class components
+// function App() {
+//     return <div className='App'>
+//         <Counter message='The count value is '/>
+//     </div>
+// }
 
 
 // // useContext for event
