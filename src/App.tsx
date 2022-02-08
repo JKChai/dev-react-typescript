@@ -1,5 +1,8 @@
 import './App.css';
-import { List } from './components/generics/List';
+import { CustomButton } from './components/html/Button';
+// import { Toast } from './components/templateliterals/Toast';
+// import { RandomNumber } from './components/restriction/RandomNumber';
+// import { List } from './components/generics/List';
 // import { Counter } from './components/class/Counter';
 // import { User } from './components/context/User';
 // import { UserContextProvider } from './components/context/UserContext';
@@ -15,39 +18,62 @@ import { List } from './components/generics/List';
 // import { Status } from './components/Status';
 // import { Oscar } from './components/Oscar';
 
-
-// Generic Props
+// wrapping html elements
 function App() {
-    return (
-    <div className='App'>
-        <List 
-            items={['Batman', 'Superman', 'Wonder Woman']}
-            onClick={(item) => console.log(item)}    
-        />
-        <List items={[1,2,3]} onClick={(item) => console.log(item)} />
-        <List 
-            items = {[
-                {
-                    first: 'Bruce',
-                    last: 'Wayne',
-                },
-                {
-                    first: 'Clark',
-                    last: 'Kent',
-                },
-                {
-                    first: 'Princess',
-                    last: 'Diana',
-                    
-                },
-            ]}
-            onClick={(item) => console.log(item)}
-        />
-    </div>
+    return(
+        <div className='App'>
+            <CustomButton variant='primary' onClick={() => console.log('Clicked')}>
+                Primary Button
+            </CustomButton>
+        </div>
     )
-};
+}
 
+// // template literals & exclude
+// function App() {
+//     return <div className='App'>
+//         <Toast position='center' />
+//     </div>
+// }
 
+// // Restricting Props
+// // making use of never type
+// function App() {
+//     return <div className='App'>
+//         <RandomNumber value={10} isPositive/>
+//     </div>
+// }
+
+// // Generic Props
+// function App() {
+//     return (
+//     <div className='App'>
+//         <List 
+//             items={['Batman', 'Superman', 'Wonder Woman']}
+//             onClick={(item) => console.log(item)}    
+//         />
+//         <List items={[1,2,3]} onClick={(item) => console.log(item)} />
+//         <List 
+//             items = {[
+//                 {
+//                     first: 'Bruce',
+//                     last: 'Wayne',
+//                 },
+//                 {
+//                     first: 'Clark',
+//                     last: 'Kent',
+//                 },
+//                 {
+//                     first: 'Princess',
+//                     last: 'Diana',
+
+//                 },
+//             ]}
+//             onClick={(item) => console.log(item)}
+//         />
+//     </div>
+//     )
+// };
 
 // // Component props
 // import './App.css'
