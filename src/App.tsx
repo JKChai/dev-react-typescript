@@ -1,5 +1,6 @@
 import './App.css';
-import { CustomButton } from './components/html/Button';
+import { Text } from './components/polymorphic/Text'
+// import { CustomButton } from './components/html/Button';
 // import { Toast } from './components/templateliterals/Toast';
 // import { RandomNumber } from './components/restriction/RandomNumber';
 // import { List } from './components/generics/List';
@@ -18,16 +19,30 @@ import { CustomButton } from './components/html/Button';
 // import { Status } from './components/Status';
 // import { Oscar } from './components/Oscar';
 
-// wrapping html elements
+// polymorphism
 function App() {
     return(
         <div className='App'>
-            <CustomButton variant='primary' onClick={() => console.log('Clicked')}>
-                Primary Button
-            </CustomButton>
+            <Text as='h1' size = 'lg'>Heading</Text>
+            <Text as='p' size = 'md'>Paragraph</Text>
+            <Text as='label' htmlFor='someId' size = 'sm' color='secondary'>
+                Label
+            </Text>
         </div>
     )
 }
+
+// // wrapping html elements
+// // children component is restrict as string
+// function App() {
+//     return(
+//         <div className='App'>
+//             <CustomButton variant='primary' onClick={() => console.log('Clicked')}>
+//                 Primary Button
+//             </CustomButton>
+//         </div>
+//     )
+// }
 
 // // template literals & exclude
 // function App() {
